@@ -52,6 +52,25 @@
     border-color: #007bff;
 }
 
+a.nav-link.productsCount-wrap {
+    position: relative;
+    .productsCountNum {
+        position: absolute;
+        right: 16px;
+        top: 1px;
+        text-align: center;
+        border-radius: 7px;
+        width: 18px;
+        height: 18px;
+        background-color: #ff6161;
+        border: 1px solid #fff;
+        font-weight: 400;
+        color: #f0f0f0;
+        line-height: 16px;
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 991.98px) {
     .news-card.col-md-3.col-sm-3 {
         width: 50%;

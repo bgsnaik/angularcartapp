@@ -11,6 +11,7 @@ import { FooterComponentComponent } from './footer-component/footer-component.co
 import { SearchComponentComponent } from './search-component/search-component.component';
 import { CartComponentComponent } from './cart-component/cart-component.component';
 import { FilterComponent } from './filter/filter.component';
+import { ProductsSearchPipe } from './products-search.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FilterComponent } from './filter/filter.component';
     FooterComponentComponent,
     SearchComponentComponent,
     CartComponentComponent,
-    FilterComponent
+    FilterComponent,
+    ProductsSearchPipe
   ],
   imports: [
     BrowserModule,

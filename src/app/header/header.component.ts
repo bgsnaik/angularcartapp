@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from './../Book';
+import { BookService } from './../book.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  title = 'Book API Response ';
+      books: Book[];
+      productsCount = 0;
+      constructor(private bookService: BookService) {}
 
-  ngOnInit() {
-  }
+      ngOnInit() {
+        this
+          .bookService
+          .getBook()
+          .subscribe((data: Book[]) => {
+            this.books = data;
+            console.log('data BGS ...........urldata BGS', data);
+        });
+
+        this.bookService.getProductsCount().subscribe(data => {
+            this.productsCount = data;
+        });
+    }
 
 }

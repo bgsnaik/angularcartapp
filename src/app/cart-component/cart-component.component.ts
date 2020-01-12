@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookService } from './../book.service';
 
 @Component({
   selector: 'app-cart-component',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private bookService: BookService) { }
+  products = [];
 
   ngOnInit() {
+    this.products = this.bookService.getProducts();
   }
 
 }

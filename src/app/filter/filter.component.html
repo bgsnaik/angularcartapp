@@ -1,1 +1,24 @@
-<p>filter works!</p>
+<!-- <p>filter-component Santhosh Naik B G</p> -->
+<div class="container-wrap">
+    <input type="text" class="form-control" placeholder="Search" [(ngModel)]="productsSearch" id="listSearch">
+    <div class="news-card col-md-3 col-sm-3" *ngFor="let book of books | productsSearch: query">
+        <figure><img [src]="book.img_url" alt=""></figure>
+        <div class="news-ctnt">
+            <p class="font-16b"> <strong>{{ book.name }}</strong></p>
+            <p class="font-16b"><span>ID : {{ book.id }} </span></p>
+            <p class="font-16b">
+                <strong>{{  book.price | currency: 'INR':true }}  </strong> <span> <del> {{ book.discount  | currency: 'INR':true }} </del> </span>
+            </p>
+            <p class="font-16b"><span>Category :{{ book.category }}</span></p>
+            <div class="star-rating">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                </ul>
+            </div>
+            <button type="button" (click)="addProdutToCart(book)" class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>

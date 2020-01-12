@@ -1,1 +1,60 @@
-<p>cart-component works!</p>
+<div class="card-body">
+    <div class="row card-lt" *ngFor="let book of products">
+        <div class="col-12 col-sm-12 col-md-2 text-center">
+            <img class="img-responsive" [src]="book.img_url" alt="prewiew" width="120" height="80">
+        </div>
+        <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+            <p class="product-name"><strong>{{ book.name }}</strong></p>
+            <p class="product-name"><strong><del> {{ book.discount  | currency: 'INR':true }} </del></strong></p>
+            <h4>
+                <small>{{ book.category }}</small>
+            </h4>
+        </div>
+        <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+            <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                <h6><strong>{{  book.price | currency: 'INR':true }} </strong></h6>
+            </div>
+            <div class="col-4 col-sm-4 col-md-4">
+                <div class="quantity">
+                    <input type="button" value="+" class="plus">
+                    <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty" size="4">
+                    <input type="button" value="-" class="minus">
+                </div>
+            </div>
+            <div class="col-2 col-sm-2 col-md-2 text-right">
+                <button type="button" class="btn btn-outline-danger btn-xs">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>
+
+
+<!-- <p>cart component Santhosh Naik B G</p> -->
+<!-- 
+<div class="news-card col-md-3 col-sm-3" *ngFor="let book of products">
+    <a href="" class="link-card" title=""></a>
+    <figure><img [src]="book.img_url" alt=""></figure>
+    <div class="news-ctnt">
+        <p class="font-16b"> <strong>{{ book.name }}</strong></p>
+        <p class="font-16b"><span>ID : {{ book.id }} </span></p>
+        <p class="font-16b">
+            <strong>{{  book.price | currency: 'INR':true }}  </strong> <span> <del> {{ book.discount  | currency: 'INR':true }} </del> </span>
+        </p>
+        <p class="font-16b"><span>Category :{{ book.category }}</span></p>
+        <div class="star-rating">
+            <ul class="list-inline">
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+            </ul>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- cart page -->
