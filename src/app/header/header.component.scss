@@ -71,8 +71,38 @@ a.nav-link.productsCount-wrap {
     }
 }
 
+div#navbarResponsive {
+    display: block;
+}
+
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark-blue.static-top.desktop {
+    display: block;
+}
+
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark-blue.static-top.mobile {
+    display: none;
+}
+
 @media (max-width: 991.98px) {
     .news-card.col-md-3.col-sm-3 {
         width: 50%;
+    }
+    ul.navbar-nav.ml-auto {
+        flex-direction: unset;
+        display: inline-flex;
+        width: 25%;
+        float: right;
+    }
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark-blue.static-top.mobile {
+        display: block;
+    }
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark-blue.static-top.desktop {
+        display: none;
+    }
+    div#navbarResponsive {
+        width: 100%;
+    }
+    li.nav-item {
+        width: 40%;
     }
 }
