@@ -1,7 +1,10 @@
 <!-- <p>filter-component Santhosh Naik B G</p> -->
 <div class="container-wrap">
-    <input type="text" class="form-control" placeholder="Search" [(ngModel)]="productsSearch" id="listSearch">
-    <div class="news-card col-md-3 col-sm-3" *ngFor="let book of books | productsSearch: query">
+    <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+    <div class="news-card col-md-3 col-sm-3" *ngFor="let book of books| productsSearch: query">{{book.name}}
+
+        <!-- <input type="text" class="form-control" placeholder="Search" id="listSearch">
+    <div class="news-card col-md-3 col-sm-3" *ngFor="let book of books"> -->
         <figure><img [src]="book.img_url" alt=""></figure>
         <div class="news-ctnt">
             <p class="font-16b"> <strong>{{ book.name }}</strong></p>
